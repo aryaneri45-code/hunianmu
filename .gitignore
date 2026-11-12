@@ -8,3 +8,4 @@ storage/*
 frontend/public/build/
 artifacts/
 *.log
+RESUME.md
