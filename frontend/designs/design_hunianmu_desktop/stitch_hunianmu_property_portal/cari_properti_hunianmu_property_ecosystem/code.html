@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>HunianMu Property Ecosystem</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-surface": "#213145", "on-error": "#ffffff", "on-primary-container": "#7b8ba4", "primary": "#000c1f", "inverse-on-surface": "#eaf1ff", "error-container": "#ffdad6", "secondary-fixed": "#66ff8e", "outline": "#75777d", "primary-fixed": "#d4e3ff", "secondary-fixed-dim": "#3de273", "on-primary-fixed": "#0b1c31", "on-background": "#0b1c30", "on-primary-fixed-variant": "#38485e", "surface-tint": "#505f77", "on-tertiary-fixed-variant": "#003ea8", "surface-container-low": "#eff4ff", "on-secondary": "#ffffff", "surface-bright": "#f8f9ff", "on-surface-variant": "#44474d", "tertiary-container": "#001d59", "secondary-container": "#5dfd8a", "on-secondary-container": "#007232", "surface-container-lowest": "#ffffff", "on-tertiary": "#ffffff", "tertiary-fixed-dim": "#b4c5ff", "on-secondary-fixed-variant": "#005322", "primary-fixed-dim": "#b8c7e3", "surface-dim": "#cbdbf5", "on-surface": "#0b1c30", "tertiary-fixed": "#dbe1ff", "secondary": "#006d2f", "outline-variant": "#c4c6cd", "primary-container": "#132338", "surface-container-high": "#dce9ff", "error": "#ba1a1a", "surface-container": "#e5eeff", "surface-variant": "#d3e4fe", "on-secondary-fixed": "#002109", "surface": "#f8f9ff", "on-tertiary-fixed": "#00174b", "on-primary": "#ffffff", "background": "#f8f9ff", "surface-container-highest": "#d3e4fe", "on-tertiary-container": "#5482ff", "inverse-primary": "#b8c7e3", "tertiary": "#00092a", "on-error-container": "#93000a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "space-md": "1rem", "space-xl": "2.5rem", "gutter-mobile": "1rem", "space-sm": "0.5rem", "gutter": "1.5rem", "space-lg": "1.5rem" }, "fontFamily": { "body-sm": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-lg": ["Inter"], "label-md": ["Inter"], "label-sm": ["Inter"], "body-lg": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "800" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }] } } } };</script></head><body class="bg-background text-on-surface font-body-md antialiased selection:bg-secondary selection:text-on-secondary min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin pt-space-sm"><div class="h-20 w-full rounded-xl bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_4px_24px_-4px_rgba(19,35,56,0.08)] px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm shrink-0"><img alt="HUNIANMU-LOGO-VERTICAL.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrC9mRzcGr0mdL-AY2ogFwI5zJaTaIqonHdVDFUoFfHioiSeTEFE_n3Ie7RhAMsrt_agiFJR6n0odGtUxWVFK5USXEr16hCBSkYdfnk5Uoqo9An6v3eAGOZXb26oprYnlmAbVSfQlJqdAhN5vn5B9bnorKvmDVyzNUkFL1kBRLu3e8MdrscCu_yyQSuT8hVlq_32fTChv7FjfKSTmosz39KoC7mwGBzKIKI9owviqqrRp-0KaLUCxTOTKKg"/><a class="flex flex-col" data-path="beranda" href="#"></a></div><nav class="hidden lg:flex items-center gap-space-xs bg-surface-container-low/70 px-space-sm py-space-xs rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.02)]" data-active-classes="bg-primary-container text-on-primary font-label-lg rounded-full px-space-md py-space-xs shadow-sm"><a class="font-label-lg text-label-lg px-space-md py-space-xs rounded-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="beranda" href="#">Beranda</a><a class="font-label-lg text-label-lg px-space-md py-space-xs rounded-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="cari-properti" href="#">Cari Properti</a><a class="font-label-lg text-label-lg px-space-md py-space-xs rounded-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="iklankan-properti" href="#">Iklankan Properti</a><a class="font-label-lg text-label-lg px-space-md py-space-xs rounded-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="cara-kerja" href="#">Cara Kerja</a><a class="font-label-lg text-label-lg px-space-md py-space-xs rounded-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="kontak" href="#">Kontak</a></nav><div class="flex items-center gap-space-sm shrink-0"><a class="hidden sm:inline-flex items-center justify-center font-label-lg text-label-lg px-space-md py-space-xs rounded-full bg-surface-container-lowest text-primary shadow-[0_1px_4px_rgba(0,0,0,0.05)] hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="iklankan-properti" href="#">Pasang Iklan</a><a class="inline-flex items-center gap-space-xs font-label-lg text-label-lg px-space-md py-space-xs rounded-full bg-secondary text-on-secondary shadow-[0_4px_14px_rgba(0,109,47,0.25)] hover:bg-primary-container hover:text-on-primary transition-all" href="https://wa.me/6281234567890" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">chat</span><span class="hidden md:inline">Hubungi Admin</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-20 bg-background flex-1"><div class="flex flex-col w-full">
+<!-- Subtle Ambient Glow Canvas Backdrop -->
+<div class="relative w-full overflow-hidden bg-gradient-to-b from-surface-container-low via-background to-background pb-space-xl">
+<!-- Atmospheric Blurred Glass Accents inspired by modern glassmorphism reference -->
+<div class="absolute -top-32 left-1/4 w-96 h-96 bg-primary-fixed/40 rounded-full blur-3xl pointer-events-none -z-0"></div>
+<div class="absolute top-48 right-10 w-80 h-80 bg-secondary-container/20 rounded-full blur-3xl pointer-events-none -z-0"></div>
+<div class="relative z-10 max-w-7xl mx-auto px-margin-mobile lg:px-margin pt-space-md">
+<!-- 1. Breadcrumb Navigation -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface-variant mb-space-md">
+<a class="hover:text-primary transition-colors flex items-center gap-1" data-path="beranda" href="#">
+<span class="material-symbols-outlined text-[16px]">home</span>
+          Beranda
+        </a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="font-label-md text-label-md text-primary font-semibold bg-surface-container px-space-xs py-0.5 rounded">Cari Properti</span>
+</nav>
+<!-- 2. Header Section & Floating Search Capsule -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm uppercase tracking-wider mb-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+            Database Properti Terverifikasi 2026
+          </div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+            Eksplorasi Properti &amp; Hunian Nyaman
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs">
+            Temukan 450+ pilihan indekos, kontrakan, rumah hunian, dan tanah dengan verifikasi legalitas resmi &amp; respon WhatsApp instan langsung ke pemilik/admin.
+          </p>
+</div>
+<!-- Quick Summary & Live Counter Badge -->
+<div class="flex items-center gap-space-md shrink-0 bg-surface-container-lowest/80 backdrop-blur-md p-space-sm rounded-xl shadow-sm">
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-outline block uppercase">Listing Aktif</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">482 Unit</span>
+</div>
+<div class="h-9 w-px bg-surface-container-highest"></div>
+<div class="w-10 h-10 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+</div>
+</div>
+<!-- Main Search Glassmorphic Bar (Desktop & Mobile Unified) -->
+<div class="w-full bg-surface-container-lowest/90 backdrop-blur-xl rounded-xl shadow-[0_12px_36px_-8px_rgba(19,35,56,0.09)] p-space-sm lg:p-space-md mb-space-md">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm items-center">
+<!-- Keyword & Campus Input -->
+<div class="md:col-span-5 relative">
+<div class="flex items-center h-12 bg-surface-container-low rounded-lg px-space-sm">
+<span class="material-symbols-outlined text-outline mr-space-xs text-[20px]">search</span>
+<input class="w-full bg-transparent border-none outline-none font-body-md text-body-md text-on-surface placeholder:text-outline" id="keywordInput" placeholder="Cari area, nama jalan, atau kampus (UGM, UNY, UPN, Jakal)..." type="text" value="Dekat Kampus UGM"/>
+</div>
+</div>
+<!-- Quick Dropdown: Property Category -->
+<div class="md:col-span-3 relative">
+<div class="flex items-center h-12 bg-surface-container-low rounded-lg px-space-sm">
+<span class="material-symbols-outlined text-outline mr-space-xs text-[20px]">apartment</span>
+<select class="w-full bg-transparent border-none outline-none font-body-md text-body-md text-on-surface appearance-none cursor-pointer">
+<option value="all">Semua Tipe Properti</option>
+<option value="kos-putri">Indekos Putri</option>
+<option value="kos-putra">Indekos Putra</option>
+<option value="kontrakan">Rumah Kontrakan</option>
+<option value="jual-rumah">Rumah Dijual</option>
+<option value="tanah">Tanah &amp; Kavling</option>
+</select>
+<span class="material-symbols-outlined text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Quick Dropdown: Location Area -->
+<div class="md:col-span-2 relative">
+<div class="flex items-center h-12 bg-surface-container-low rounded-lg px-space-sm">
+<span class="material-symbols-outlined text-outline mr-space-xs text-[20px]">location_on</span>
+<select class="w-full bg-transparent border-none outline-none font-body-md text-body-md text-on-surface appearance-none cursor-pointer">
+<option value="all">Semua Area</option>
+<option selected="" value="sleman">Sleman</option>
+<option value="jogja-kota">Kota Jogja</option>
+<option value="bantul">Bantul</option>
+<option value="jakal">Kaliurang (Jakal)</option>
+<option value="seturan">Seturan</option>
+</select>
+<span class="material-symbols-outlined text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Submit Search Button -->
+<div class="md:col-span-2">
+<button class="w-full h-12 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-space-xs hover:bg-primary-container transition-all shadow-md active:scale-[0.98]">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+<span>Terapkan</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Active Filter Chips & Sort Controls -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-lg">
+<!-- Active Filter Pills -->
+<div class="flex flex-wrap items-center gap-space-xs" id="activeChipContainer">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline mr-space-xs">Filter Aktif:</span>
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container rounded-full text-primary font-label-md text-label-md shadow-xs">
+<span>Dekat Kampus UGM</span>
+<button aria-label="Hapus filter UGM" class="hover:text-error flex items-center">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container rounded-full text-primary font-label-md text-label-md shadow-xs">
+<span>Sleman</span>
+<button aria-label="Hapus filter Sleman" class="hover:text-error flex items-center">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container rounded-full text-primary font-label-md text-label-md shadow-xs">
+<span>AC &amp; Kamar Mandi Dalam</span>
+<button aria-label="Hapus filter fasilitas" class="hover:text-error flex items-center">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+<button class="text-error font-label-sm text-label-sm underline ml-space-xs hover:opacity-80 transition-opacity" id="resetFilterBtn">
+            Reset Semua
+          </button>
+</div>
+<!-- Sorting Selector -->
+<div class="flex items-center gap-space-xs ml-auto">
+<label class="font-label-sm text-label-sm text-outline hidden sm:inline" for="sortBy">Urutkan:</label>
+<div class="relative bg-surface-container-lowest rounded-lg shadow-sm px-space-sm py-1.5 flex items-center">
+<select class="bg-transparent border-none outline-none font-label-md text-label-md text-on-surface pr-6 cursor-pointer" id="sortBy">
+<option value="newest">Listing Terbaru</option>
+<option value="price-low">Harga Terendah</option>
+<option value="price-high">Harga Tertinggi</option>
+<option value="popular">Paling Populer &amp; Rekomendasi</option>
+</select>
+<span class="material-symbols-outlined text-outline pointer-events-none text-[16px] absolute right-2">sort</span>
+</div>
+</div>
+</div>
+<!-- MAIN CONTENT SPLIT: Sidebar Filter + Catalog Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- SIDEBAR FILTERS (4 Cols on Desktop) -->
+<aside class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-[0_4px_24px_-4px_rgba(19,35,56,0.06)] p-space-md">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">filter_list</span>
+                Filter Spesifik
+              </h3>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Live Filter</span>
+</div>
+<!-- Filter Section: Property Category Tabs -->
+<div class="flex flex-col gap-space-xs mb-space-md">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Tipe Properti</label>
+<div class="grid grid-cols-2 gap-space-xs text-center">
+<button class="px-space-xs py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-xs text-left px-space-sm flex items-center justify-between">
+<span>Semua</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</button>
+<button class="px-space-xs py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md text-left px-space-sm">
+<span>Indekos</span>
+</button>
+<button class="px-space-xs py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md text-left px-space-sm">
+<span>Kontrakan</span>
+</button>
+<button class="px-space-xs py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md text-left px-space-sm">
+<span>Rumah Jual</span>
+</button>
+<button class="px-space-xs py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md text-left px-space-sm">
+<span>Tanah Kavling</span>
+</button>
+<button class="px-space-xs py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md text-left px-space-sm">
+<span>Ruang Usaha</span>
+</button>
+</div>
+</div>
+<!-- Filter Section: Price Range Slider & Inputs -->
+<div class="flex flex-col gap-space-xs mb-space-md bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Rentang Harga</label>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Rp 500rb - 1.2M</span>
+</div>
+<!-- Custom Visual Track Indicator -->
+<div class="w-full bg-surface-container h-2 rounded-full relative my-space-xs overflow-hidden">
+<div class="absolute left-[10%] right-[30%] bg-primary h-full rounded-full"></div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs mt-1">
+<div class="bg-surface-container-lowest p-space-xs rounded-lg">
+<span class="font-label-sm text-label-sm text-outline block">Minimum</span>
+<input class="w-full bg-transparent border-none outline-none font-label-md text-label-md font-semibold text-primary" type="text" value="Rp 500.000"/>
+</div>
+<div class="bg-surface-container-lowest p-space-xs rounded-lg">
+<span class="font-label-sm text-label-sm text-outline block">Maksimum</span>
+<input class="w-full bg-transparent border-none outline-none font-label-md text-label-md font-semibold text-primary" type="text" value="Rp 150.000.000"/>
+</div>
+</div>
+</div>
+<!-- Filter Section: Sub-Tipe Kos / Demografi -->
+<div class="flex flex-col gap-space-xs mb-space-md">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Aturan Kos &amp; Gender</label>
+<div class="flex flex-wrap gap-space-xs">
+<label class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-full bg-surface-container cursor-pointer hover:bg-surface-container-high transition-colors">
+<input checked="" class="accent-secondary rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Khusus Putri</span>
+</label>
+<label class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-full bg-surface-container cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="accent-secondary rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Khusus Putra</span>
+</label>
+<label class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-full bg-surface-container cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="accent-secondary rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Campur / Pasutri</span>
+</label>
+</div>
+</div>
+<!-- Filter Section: Fasilitas Utama (Checkboxes) -->
+<div class="flex flex-col gap-space-xs mb-space-md">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Fasilitas Prioritas</label>
+<div class="flex flex-col gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<label class="flex items-center justify-between p-space-xs rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer">
+<span class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">ac_unit</span>
+                    AC Berpendingin
+                  </span>
+<input checked="" class="accent-secondary w-4 h-4 rounded" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-space-xs rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer">
+<span class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">bathtub</span>
+                    Kamar Mandi Dalam
+                  </span>
+<input checked="" class="accent-secondary w-4 h-4 rounded" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-space-xs rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer">
+<span class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">wifi</span>
+                    WiFi Cepat (Fiber)
+                  </span>
+<input checked="" class="accent-secondary w-4 h-4 rounded" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-space-xs rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer">
+<span class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">directions_car</span>
+                    Parkir Mobil Lapang
+                  </span>
+<input class="accent-secondary w-4 h-4 rounded" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-space-xs rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer">
+<span class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">lock_open_right</span>
+                    Bebas Jam Malam (24 Jam)
+                  </span>
+<input class="accent-secondary w-4 h-4 rounded" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-space-xs rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer">
+<span class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">bolt</span>
+                    Listrik Termasuk (Free Token)
+                  </span>
+<input class="accent-secondary w-4 h-4 rounded" type="checkbox"/>
+</label>
+</div>
+</div>
+<!-- Sidebar Fast Assistance Mini Banner -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-space-xs mt-space-sm">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-secondary text-[20px]">support_agent</span>
+<span>Butuh Bantuan Cepat?</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Konsultan listing kami siap menyortirkan kamar/rumah sesuai kriteria Anda dalam 15 menit.
+              </p>
+<a class="mt-1 inline-flex items-center justify-center gap-1.5 w-full py-2 bg-secondary text-on-secondary rounded-lg font-label-sm text-label-sm font-semibold hover:bg-primary-container hover:text-on-primary transition-all" href="https://wa.me/6281234567890" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+                Chat Konsultan Gratis
+              </a>
+</div>
+</div>
+</aside>
+<!-- PROPERTY CATALOG LISTING (8 Cols on Desktop - 2 Cols Grid of High-Polish Cards) -->
+<main class="lg:col-span-8 flex flex-col gap-space-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- CARD 1: HM-0101 (Kos Putri Jakal UGM) -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_-2px_rgba(19,35,56,0.06)] hover:shadow-[0_12px_28px_-4px_rgba(19,35,56,0.12)] transition-all duration-300 flex flex-col">
+<div class="relative w-full h-52 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Interior of a luxury modern Indonesian student kos bedroom near university campus, showing warm ambient lighting, timber working desk, comfortable queen bed, air conditioning, and large bright window with minimalist aesthetic in clean slate and navy tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBvcWHNWPqFQlLDHZw0KEH3pL-JiRxc25kKCq5hDnxP2j6RgClIGIWAOiQe66uv4YIW7CMwWe8Z9Y37dBXn4Zxgdi82MUAUDBTDqM2q73WWMr5oG4Re-YQ74dgZFy3ypXVrKMI2Z-hWXso99KOrnBuEwAb6JOSiB_uiw1YxYrIpNIXD1seviyBdd8YNDpwDovyw6DmeilxDAEWL3Iaff685c_54OGCoF913jzNXqY"/>
+<!-- Badges -->
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-primary/80 backdrop-blur-md text-on-primary font-label-sm text-label-sm">
+                    HM-0101
+                  </span>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+                    Khusus Putri
+                  </span>
+</div>
+<button aria-label="Simpan properti" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-error transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3">
+<span class="px-2 py-0.5 rounded-md bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                    Tersedia 2 Kamar
+                  </span>
+</div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-headline-md text-headline-md font-bold text-primary">
+                      Rp 1.850.000 <span class="text-body-sm font-body-sm text-on-surface-variant font-normal">/ bulan</span>
+</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-1">
+                    Kos Putri Exclusive Jakal KM 5 UGM
+                  </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1 mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+                    Jl. Kaliurang KM 5, Caturtunggal, Sleman (700m UGM)
+                  </p>
+<!-- Specs Tray -->
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface-variant py-space-xs bg-surface-container-low px-space-sm rounded-lg mb-space-md">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bathtub</span> KM Dalam</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">ac_unit</span> AC</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">wifi</span> WiFi 50Mbps</span>
+</div>
+</div>
+<!-- Action Controls -->
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<button class="h-10 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md flex items-center justify-center transition-colors">
+                    Detail Lengkap
+                  </button>
+<a class="h-10 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-[0_2px_8px_rgba(0,109,47,0.2)] hover:bg-primary-container hover:text-on-primary transition-all" href="https://wa.me/6281234567890?text=Halo%20Admin%20HunianMu,%20saya%20tertarik%20dengan%20listing%20HM-0101" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+                    Tanya WA
+                  </a>
+</div>
+</div>
+</article>
+<!-- CARD 2: HM-0102 (Kontrakan Minimalis Modern Maguwoharjo) -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_-2px_rgba(19,35,56,0.06)] hover:shadow-[0_12px_28px_-4px_rgba(19,35,56,0.12)] transition-all duration-300 flex flex-col">
+<div class="relative w-full h-52 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern tropical facade of a single-story Indonesian residential house with clean white walls, minimalist carport with room for two cars, manicured green front garden, warm porch lights in dusk daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAshOTD41YVBhmBgw6gfBG6bf_o3E2Qq1pnKwU4ftOJHYtkc72YjnhGYaEwiG7gyjEBbxt1nsO1PZeBHfflcpTJXto793I-zW00Zo13pkkrbRIiN-t0kD8HhcL0arCmsyZawGQVRq-5eNApr8IQzvzF4ChnzWF39SKalJJrvo2RHA5Rp-kd2cMUir5JVAih4lgT2pVUJW3AB9lO8WXE2wAHKn5NOjHxqJ5DCUGdmnE"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-primary/80 backdrop-blur-md text-on-primary font-label-sm text-label-sm">
+                    HM-0102
+                  </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur text-primary font-label-sm text-label-sm font-bold">
+                    Kontrakan Rumah
+                  </span>
+</div>
+<button aria-label="Simpan properti" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-error transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3">
+<span class="px-2 py-0.5 rounded-md bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+                    Siap Huni Langsung
+                  </span>
+</div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-headline-md text-headline-md font-bold text-primary">
+                      Rp 32.000.000 <span class="text-body-sm font-body-sm text-on-surface-variant font-normal">/ tahun</span>
+</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-1">
+                    Kontrakan Minimalis Modern 3 KT Maguwoharjo
+                  </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1 mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+                    Maguwoharjo, Depok, Sleman (Dekat Stadion &amp; Ringroad)
+                  </p>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface-variant py-space-xs bg-surface-container-low px-space-sm rounded-lg mb-space-md">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bed</span> 3 KT</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bathtub</span> 2 KM</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">garage_home</span> Carport 2 Mobil</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<button class="h-10 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md flex items-center justify-center transition-colors">
+                    Detail Lengkap
+                  </button>
+<a class="h-10 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-[0_2px_8px_rgba(0,109,47,0.2)] hover:bg-primary-container hover:text-on-primary transition-all" href="https://wa.me/6281234567890?text=Halo%20Admin%20HunianMu,%20saya%20tertarik%20dengan%20listing%20HM-0102" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+                    Tanya WA
+                  </a>
+</div>
+</div>
+</article>
+<!-- CARD 3: HM-0103 (Kos Putra Bebas Seturan UPN) -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_-2px_rgba(19,35,56,0.06)] hover:shadow-[0_12px_28px_-4px_rgba(19,35,56,0.12)] transition-all duration-300 flex flex-col">
+<div class="relative w-full h-52 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Interior of a stylish modern young man's bedroom in Yogyakarta with exposed brick feature wall, ergonomic study setup, dual monitors, industrial metal shelving, high ceiling, bright natural sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuAePFSnT1x_bF6zfI2lf2yghf9cFmdzuBZlNQIL6qamTwC1ggfGHx2D8UURVH_HPz0ev58Qewbz0Jnrg_WoOoRt-yEmQoBIUp5LKdhp1RotbwMKCucoiUQW79Pl3VR46kedrO8dQsoOM8SYRhIKMAuukgSDZSBBcjIoCk0oBG0wHzuXMnmHlvBhjoc15LUf2ooAWB71TTXUW80ZjZh9MxG0RMaMhXPUqJB0g6Z0I"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-primary/80 backdrop-blur-md text-on-primary font-label-sm text-label-sm">
+                    HM-0103
+                  </span>
+<span class="px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm font-bold">
+                    Khusus Putra
+                  </span>
+</div>
+<button aria-label="Simpan properti" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-error transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3">
+<span class="px-2 py-0.5 rounded-md bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+                    Bebas Jam Malam
+                  </span>
+</div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-headline-md text-headline-md font-bold text-primary">
+                      Rp 1.200.000 <span class="text-body-sm font-body-sm text-on-surface-variant font-normal">/ bulan</span>
+</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-1">
+                    Kos Putra Bebas Nyaman Seturan Dekat UPN
+                  </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1 mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+                    Seturan Raya, Condongcatur (3 Menit Kampus UPN &amp; YKPN)
+                  </p>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface-variant py-space-xs bg-surface-container-low px-space-sm rounded-lg mb-space-md">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">key</span> Akses 24 Jam</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">local_parking</span> Parkir Mobil</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">wifi</span> WiFi</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<button class="h-10 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md flex items-center justify-center transition-colors">
+                    Detail Lengkap
+                  </button>
+<a class="h-10 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-[0_2px_8px_rgba(0,109,47,0.2)] hover:bg-primary-container hover:text-on-primary transition-all" href="https://wa.me/6281234567890?text=Halo%20Admin%20HunianMu,%20saya%20tertarik%20dengan%20listing%20HM-0103" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+                    Tanya WA
+                  </a>
+</div>
+</div>
+</article>
+<!-- CARD 4: HM-0104 (Rumah Scandinavian Palagan) -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_-2px_rgba(19,35,56,0.06)] hover:shadow-[0_12px_28px_-4px_rgba(19,35,56,0.12)] transition-all duration-300 flex flex-col">
+<div class="relative w-full h-52 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Chic two-story Scandinavian architectural home in Yogyakarta with pitch roof, black framed windows, white rendering, wood slat accents, and paved front yard on a bright sunny afternoon." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGUxk8oUQmHRHvVwKO54qgtNGHCzPPZSzrEacMUcz-U_odX01N1mplTPALNNJEQ7NRCpUTT0kWNFy0upTVSvuDkdAeepo1VyCzdqo8q9jZy07GJ3fZyFOKvPO_856U2nBU_sYCm8TwZNuGUhKGfi1A-gzBt_8Pew2np9OSBnHFCL-W6dGa1yV7AmRlp9YqcbEhybRFjP9_QgTYAjpnoON02EVSNd-C9jytw8WY4Ag"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-primary/80 backdrop-blur-md text-on-primary font-label-sm text-label-sm">
+                    HM-0104
+                  </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">
+                    Dijual (Hak Milik)
+                  </span>
+</div>
+<button aria-label="Simpan properti" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-error transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3">
+<span class="px-2 py-0.5 rounded-md bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified</span> Pilihan Admin
+                  </span>
+</div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-headline-md text-headline-md font-bold text-primary">
+                      Rp 890.000.000 <span class="text-body-sm font-body-sm text-secondary font-bold">Nego</span>
+</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-1">
+                    Rumah Scandinavian 2 Lantai Siap Huni Palagan
+                  </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1 mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+                    Jl. Palagan Tentara Pelajar KM 9, Sariharjo, Sleman
+                  </p>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface-variant py-space-xs bg-surface-container-low px-space-sm rounded-lg mb-space-md">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">description</span> SHM &amp; PBG</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bed</span> 3 KT</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">straighten</span> LT 115m²</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<button class="h-10 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md flex items-center justify-center transition-colors">
+                    Detail Lengkap
+                  </button>
+<a class="h-10 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-[0_2px_8px_rgba(0,109,47,0.2)] hover:bg-primary-container hover:text-on-primary transition-all" href="https://wa.me/6281234567890?text=Halo%20Admin%20HunianMu,%20saya%20tertarik%20dengan%20listing%20HM-0104" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+                    Tanya WA
+                  </a>
+</div>
+</div>
+</article>
+<!-- CARD 5: HM-0105 (Tanah Pekarangan Kaliurang KM 12) -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_-2px_rgba(19,35,56,0.06)] hover:shadow-[0_12px_28px_-4px_rgba(19,35,56,0.12)] transition-all duration-300 flex flex-col">
+<div class="relative w-full h-52 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Lush green Indonesian property plot of flat land with perimeter markers, facing asphalt suburban access road with coconut palms, clear blue sky and distant Mount Merapi view in soft morning light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmb40ab0qI83FHHSFTJfYjTkTR7JBStUR9PtIUgQSFlKd67XoQv8duN-dJm5MfO1GUNQdKxTl6_jf5R0GeT-haHpkD5pOktu6y6ClVJbK9DIpeBpQt8OSHfDZVBwZ1TIIjnNeDIJWBVqH1ujAQ5JhUXPe3ctnFA8jMsy7KKTWzwJC8XtfoSf20-2GiStSvM2eDD149YPh1FmbYVvKLQUS6A5980Hj7PGxVe_MRiG4"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-primary/80 backdrop-blur-md text-on-primary font-label-sm text-label-sm">
+                    HM-0105
+                  </span>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+                    Tanah Kavling
+                  </span>
+</div>
+<button aria-label="Simpan properti" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-error transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3">
+<span class="px-2 py-0.5 rounded-md bg-primary text-on-primary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+                    SHM Pekarangan Valid
+                  </span>
+</div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-headline-md text-headline-md font-bold text-primary">
+                      Rp 3.500.000 <span class="text-body-sm font-body-sm text-on-surface-variant font-normal">/ m²</span>
+</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-1">
+                    Tanah Pekarangan Siap Bangun Kaliurang KM 12
+                  </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1 mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+                    Jl. Kaliurang KM 12, Ngaglik, Sleman (Dekat Kampus UII)
+                  </p>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface-variant py-space-xs bg-surface-container-low px-space-sm rounded-lg mb-space-md">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">square_foot</span> Luas 240 m²</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">local_shipping</span> Akses Truk Pasir</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">north</span> Hadap Timur</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<button class="h-10 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md flex items-center justify-center transition-colors">
+                    Detail Lengkap
+                  </button>
+<a class="h-10 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-[0_2px_8px_rgba(0,109,47,0.2)] hover:bg-primary-container hover:text-on-primary transition-all" href="https://wa.me/6281234567890?text=Halo%20Admin%20HunianMu,%20saya%20tertarik%20dengan%20listing%20HM-0105" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+                    Tanya WA
+                  </a>
+</div>
+</div>
+</article>
+<!-- CARD 6: HM-0106 (Paviliun Pasutri Ring Road Utara) -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_-2px_rgba(19,35,56,0.06)] hover:shadow-[0_12px_28px_-4px_rgba(19,35,56,0.12)] transition-all duration-300 flex flex-col">
+<div class="relative w-full h-52 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Cozy modern interior living room and kitchenette of an Indonesian pavilion rental home with sofa, wooden breakfast bar, warm pendant lighting, and neat clean kitchen sink counters." src="https://lh3.googleusercontent.com/aida-public/AB6AXuArydeD9uSgztnUMssLTe2wT6XYjJUEogQVc3G1OqT1be8rlOotlChT7YzogaW8E9MXfOk7KiAQSqkNmkbfCq1anlirBaV2LFl1A8aAW-KHETdhtyvdtKnJpcj0l1JZN3xFDOM1foNcZzKtdIcplTQXg20cPl4oVRv_yqQaX3U0fX5WoK1KTsT0u5x89aWKyPqLu5sO_xJ7z0bNWOTqQG8hKxQGYYwWmfPby1RiF1k"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-primary/80 backdrop-blur-md text-on-primary font-label-sm text-label-sm">
+                    HM-0106
+                  </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur text-primary font-label-sm text-label-sm font-bold">
+                    Paviliun / Pasutri
+                  </span>
+</div>
+<button aria-label="Simpan properti" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-error transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3">
+<span class="px-2 py-0.5 rounded-md bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+                    Full Furnished
+                  </span>
+</div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-headline-md text-headline-md font-bold text-primary">
+                      Rp 2.400.000 <span class="text-body-sm font-body-sm text-on-surface-variant font-normal">/ bulan</span>
+</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-1">
+                    Paviliun Pasutri &amp; Keluarga Ring Road Utara
+                  </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1 mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+                    Ring Road Utara, Pogung Lor, Mlati, Sleman
+                  </p>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface-variant py-space-xs bg-surface-container-low px-space-sm rounded-lg mb-space-md">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">living</span> Ruang Tamu</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">countertops</span> Dapur Mini</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bolt</span> Listrik Token 1300</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<button class="h-10 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md flex items-center justify-center transition-colors">
+                    Detail Lengkap
+                  </button>
+<a class="h-10 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-[0_2px_8px_rgba(0,109,47,0.2)] hover:bg-primary-container hover:text-on-primary transition-all" href="https://wa.me/6281234567890?text=Halo%20Admin%20HunianMu,%20saya%20tertarik%20dengan%20listing%20HM-0106" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+                    Tanya WA
+                  </a>
+</div>
+</div>
+</article>
+<!-- CARD 7: HM-0107 (Ruko Gejayan) -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_-2px_rgba(19,35,56,0.06)] hover:shadow-[0_12px_28px_-4px_rgba(19,35,56,0.12)] transition-all duration-300 flex flex-col">
+<div class="relative w-full h-52 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Commercial shophouse ruko exterior on a bustling main street in Yogyakarta with large glass front display, parking area, aluminum composite panel architectural finish under clear midday sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnnXW3m_-d39XZeQuCuKkdItirJEZJuNx-t794K-dcm98yRe-ZzCfE0aWTKvjXMwsjG2X2cWFkwnZGhoL9rPy3U4LZ8r_jo7BpRitBr5AAVIZgU8F5lWulyUI1CWmSvLzMu_RramnwjIJJrAXjSLpxMmNGm2Y1KhiblQ7rsaF9MfXmZPTNIBj7WCTIFQped_MbgVjx__t5rrLe7xdDZOok2KtuiHcFFDO39CcWjw4"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-primary/80 backdrop-blur-md text-on-primary font-label-sm text-label-sm">
+                    HM-0107
+                  </span>
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">
+                    Ruang Usaha / Ruko
+                  </span>
+</div>
+<button aria-label="Simpan properti" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-error transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3">
+<span class="px-2 py-0.5 rounded-md bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+                    Lokasi Premium Prime
+                  </span>
+</div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-headline-md text-headline-md font-bold text-primary">
+                      Rp 55.000.000 <span class="text-body-sm font-body-sm text-on-surface-variant font-normal">/ tahun</span>
+</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-1">
+                    Ruko Strategis Pinggir Jalan Gejayan 2 Lantai
+                  </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1 mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+                    Jl. Affandi (Gejayan), Sleman (Trafik Mahasiswa Ramai)
+                  </p>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface-variant py-space-xs bg-surface-container-low px-space-sm rounded-lg mb-space-md">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">storefront</span> 2 Lantai</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">local_parking</span> Parkir 4 Mobil</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">water_drop</span> Air Sumur Bor</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<button class="h-10 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md flex items-center justify-center transition-colors">
+                    Detail Lengkap
+                  </button>
+<a class="h-10 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-[0_2px_8px_rgba(0,109,47,0.2)] hover:bg-primary-container hover:text-on-primary transition-all" href="https://wa.me/6281234567890?text=Halo%20Admin%20HunianMu,%20saya%20tertarik%20dengan%20listing%20HM-0107" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+                    Tanya WA
+                  </a>
+</div>
+</div>
+</article>
+<!-- CARD 8: HM-0108 (Coliving Premium Dekat Tugu) -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_-2px_rgba(19,35,56,0.06)] hover:shadow-[0_12px_28px_-4px_rgba(19,35,56,0.12)] transition-all duration-300 flex flex-col">
+<div class="relative w-full h-52 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern boutique coliving space in city center Yogyakarta with communal swimming pool, stylish lounge seating, greenery planters, tropical wood deck and contemporary hotel ambience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5PpEPHVFkieehsQYD5pcyJxj3TcayCr4gmKaTENbz5S0yHJmxGpP4vChtO_Dkz5QkW_rLydz9_rT5Y5OJfPjEQKvs6LPegZ_61re69l5Jxza6TEVXA5Rv5CmSZ_QwKZzXdLIIM7hNQXGJBlO4lhI8efMFCVxe_TmFB_JaBvgvYNG4eUGDIg4M0iTQuM1BSYq0_EUenjxHROZkK1jI4ig_I-jhzuhfOcA3t4UJOW0"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-primary/80 backdrop-blur-md text-on-primary font-label-sm text-label-sm">
+                    HM-0108
+                  </span>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-bold">
+                    Coliving Premium
+                  </span>
+</div>
+<button aria-label="Simpan properti" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-error transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3">
+<span class="px-2 py-0.5 rounded-md bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+                    Free Coworking Space
+                  </span>
+</div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-headline-md text-headline-md font-bold text-primary">
+                      Rp 2.100.000 <span class="text-body-sm font-body-sm text-on-surface-variant font-normal">/ bulan</span>
+</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-1">
+                    Coliving Modern Premium Dekat Tugu Jogja
+                  </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1 mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+                    Gowongan, Jetis, Kota Yogyakarta (300m dari Stasiun Tugu)
+                  </p>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface-variant py-space-xs bg-surface-container-low px-space-sm rounded-lg mb-space-md">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">pool</span> Kolam Renang</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">desk</span> Coworking</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">coffee</span> Cafe Mini</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<button class="h-10 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md flex items-center justify-center transition-colors">
+                    Detail Lengkap
+                  </button>
+<a class="h-10 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-[0_2px_8px_rgba(0,109,47,0.2)] hover:bg-primary-container hover:text-on-primary transition-all" href="https://wa.me/6281234567890?text=Halo%20Admin%20HunianMu,%20saya%20tertarik%20dengan%20listing%20HM-0108" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+                    Tanya WA
+                  </a>
+</div>
+</div>
+</article>
+</div>
+<!-- 6. EMPTY STATE / FALLBACK ASSISTANCE BANNER (PRD FR-207) -->
+<div class="w-full bg-gradient-to-r from-primary-container via-primary to-primary-container rounded-xl text-on-primary p-space-md lg:p-space-lg shadow-xl relative overflow-hidden mt-space-md">
+<div class="absolute -right-10 -bottom-10 w-48 h-48 bg-secondary/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="max-w-xl">
+<div class="inline-flex items-center gap-1.5 px-space-xs py-0.5 rounded bg-secondary/20 text-secondary-container font-label-sm text-label-sm uppercase tracking-wider mb-space-xs">
+<span class="material-symbols-outlined text-[16px]">travel_explore</span>
+                  Layanan Bantuan Khusus Pencari Hunian
+                </div>
+<h3 class="font-headline-md text-headline-md font-bold text-white">
+                  Tidak menemukan properti yang cocok?
+                </h3>
+<p class="font-body-md text-body-md text-on-primary-container mt-space-xs">
+                  Tim Admin HunianMu siap bantu carikan kos atau kontrakan idaman secara <strong class="text-white">gratis tanpa komisi</strong> sesuai rentang budget, fasilitas wajib, dan jarak kampus Anda!
+                </p>
+</div>
+<div class="shrink-0">
+<a class="inline-flex items-center gap-space-xs px-space-md py-3 rounded-xl bg-secondary text-on-secondary font-label-lg text-label-lg shadow-[0_4px_16px_rgba(0,109,47,0.35)] hover:bg-white hover:text-primary transition-all active:scale-[0.98]" href="https://wa.me/6281234567890?text=Halo%20Admin%20HunianMu,%20saya%20minta%20tolong%20dicarikan%20properti%20sesuai%20kriteria%20saya" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">send_to_mobile</span>
+<span>Minta Dicarikan via WA</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 7. MODERN PAGINATION CONTROLS -->
+<nav aria-label="Katalog Navigasi Halaman" class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-md">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Menampilkan <span class="font-semibold text-primary">1 - 8</span> dari <span class="font-semibold text-primary">482</span> listing properti
+            </p>
+<div class="flex items-center gap-1.5">
+<button aria-label="Halaman Sebelumnya" class="w-9 h-9 rounded-lg bg-surface-container text-outline hover:text-primary hover:bg-surface-container-high transition-colors flex items-center justify-center disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-9 h-9 rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm">1</button>
+<button class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors">2</button>
+<button class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors">3</button>
+<span class="text-outline px-1 font-body-sm">...</span>
+<button class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors">12</button>
+<button aria-label="Halaman Berikutnya" class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</nav>
+</main>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Interactive micro-behavior for filters & chips
+  document.addEventListener('DOMContentLoaded', () => {
+    const resetBtn = document.getElementById('resetFilterBtn');
+    const chipContainer = document.getElementById('activeChipContainer');
+    const keywordInput = document.getElementById('keywordInput');
+
+    if (resetBtn && chipContainer) {
+      resetBtn.addEventListener('click', () => {
+        // Clear non-essential pills except label
+        const chips = chipContainer.querySelectorAll('div');
+        chips.forEach(chip => chip.remove());
+        if (keywordInput) keywordInput.value = '';
+        resetBtn.style.display = 'none';
+      });
+    }
+
+    // Individual chip delete triggers
+    if (chipContainer) {
+      chipContainer.addEventListener('click', (e) => {
+        const removeBtn = e.target.closest('button[aria-label^="Hapus filter"]');
+        if (removeBtn) {
+          const pill = removeBtn.closest('div');
+          if (pill) pill.remove();
+        }
+      });
+    }
+  });
+</script></main><footer class="w-full bg-surface-container-lowest shadow-[0_-4px_24px_-4px_rgba(19,35,56,0.04)] pt-space-xl pb-space-lg"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter mb-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="HUNIANMU-LOGO-VERTICAL.png" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrC9mRzcGr0mdL-AY2ogFwI5zJaTaIqonHdVDFUoFfHioiSeTEFE_n3Ie7RhAMsrt_agiFJR6n0odGtUxWVFK5USXEr16hCBSkYdfnk5Uoqo9An6v3eAGOZXb26oprYnlmAbVSfQlJqdAhN5vn5B9bnorKvmDVyzNUkFL1kBRLu3e8MdrscCu_yyQSuT8hVlq_32fTChv7FjfKSTmosz39KoC7mwGBzKIKI9owviqqrRp-0KaLUCxTOTKKg"/></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm mt-space-xs">Platform ekosistem properti modern dan terpercaya di Indonesia. Memudahkan pencarian indekos, rumah sewa, kontrakan, dan lahan properti strategis dengan konektivitas instan ke pemilik.</p><div class="flex items-center gap-space-xs mt-space-sm"><a aria-label="Lokasi Kantor" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">location_on</span></a><a aria-label="Email Resmi" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">mail</span></a><a aria-label="Kemitraan Komunitas" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">public</span></a></div></div><div class="flex flex-col gap-space-xs"><h4 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Kategori Populer</h4><ul class="flex flex-col gap-space-xs"><li class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">bed</span><a class="font-body-md text-body-md hover:text-on-surface transition-colors" data-path="cari-properti" href="#">Indekos &amp; Coliving</a></li><li class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">apartment</span><a class="font-body-md text-body-md hover:text-on-surface transition-colors" data-path="cari-properti" href="#">Kontrakan Bulanan</a></li><li class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">home</span><a class="font-body-md text-body-md hover:text-on-surface transition-colors" data-path="cari-properti" href="#">Rumah Hunian</a></li><li class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">landscape</span><a class="font-body-md text-body-md hover:text-on-surface transition-colors" data-path="cari-properti" href="#">Tanah &amp; Kavling</a></li></ul></div><div class="flex flex-col gap-space-xs"><h4 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Menu Cepat</h4><ul class="flex flex-col gap-space-xs"><li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="beranda" href="#">Beranda Utama</a></li><li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="cari-properti" href="#">Eksplorasi Katalog</a></li><li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="iklankan-properti" href="#">Panduan Pasang Iklan</a></li><li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="cara-kerja" href="#">Alur Verifikasi Legalitas</a></li><li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="kontak" href="#">Pusat Bantuan &amp; FAQ</a></li></ul></div><div class="flex flex-col gap-space-xs"><h4 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Hotline Dukungan</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Hubungi admin representatif kami untuk verifikasi listing atau konsultasi properti.</p><div class="mt-space-xs p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Layanan WhatsApp 24/7</span><a class="font-headline-sm text-headline-sm text-primary hover:text-secondary transition-colors flex items-center gap-space-xs" href="https://wa.me/6281234567890" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-secondary text-[20px]">support_agent</span>+62 812-3456-7890</a><span class="font-body-sm text-body-sm text-on-surface-variant">Senin - Minggu (08:00 - 22:00 WIB)</span></div></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md"><p class="font-body-sm text-body-sm text-on-surface-variant text-center sm:text-left">© 2026 HunianMu Property Ecosystem. Hak Cipta Dilindungi.</p><div class="flex items-center gap-space-md text-on-surface-variant"><a class="font-label-sm text-label-sm hover:text-on-surface transition-colors" href="#">Syarat &amp; Ketentuan</a><a class="font-label-sm text-label-sm hover:text-on-surface transition-colors" href="#">Kebijakan Privasi</a><a class="font-label-sm text-label-sm hover:text-on-surface transition-colors" href="#">Keamanan Transaksi</a></div></div></div></footer>
+</body></html>

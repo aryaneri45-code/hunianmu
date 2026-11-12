@@ -1,0 +1,2 @@
+# Set absolute paths. Copy each completed backup to separate storage via your backup provider.
+15 2 * * * cd /srv/hunianmu && /usr/bin/node deploy/scripts/backup.mjs >> /var/log/hunianmu-backup.log 2>&1

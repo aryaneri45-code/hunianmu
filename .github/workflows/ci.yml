@@ -1,0 +1,31 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: postgresql://hunianmu@127.0.0.1:55432/hunianmu
+      NODE_ENV: test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - name: Install PostgreSQL tools on runner
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y postgresql postgresql-client libpq-dev
+      - run: echo "SESSION_KEY=$(openssl rand -hex 32)" >> "$GITHUB_ENV"
+      - run: npm ci
+      - name: Start native PostgreSQL
+        run: PG_BIN="$(pg_config --bindir)" npm run db:local
+      - run: npm run typecheck && npm run lint && npm run build
+      - run: npm run db:migrate && npm run db:seed && npm test
+      - name: Stop native PostgreSQL
+        if: always()
+        run: |
+          TASK_PG_BIN="$(pg_config --bindir)"
+          if "$TASK_PG_BIN/pg_ctl" -D "$PWD/storage/pgdata" status >/dev/null 2>&1; then
+            "$TASK_PG_BIN/pg_ctl" -D "$PWD/storage/pgdata" stop -m fast
+          fi
